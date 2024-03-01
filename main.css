@@ -1,0 +1,246 @@
+::before , ::after , *{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --lm-bg: #f6f8ff;
+    --lm-bg-content: #fefefe;
+    --lm-text: #4b6a9b;
+    --lm-text-alt: #2b3442;
+    --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    --lm-icon-bg: brightness(100%);
+    /* Btn */
+    --btn: #0079ff;
+    --btn-hover: #60abff;
+  }
+  
+
+#wrapper{
+    width: 100%;
+    font-family: "Space Mono", monospace;
+    position: relative;
+    color: var(--lm-text);
+}
+
+#wrapper.dark{
+    background-color: var(--lm-text-alt);
+    color: var(--lm-bg-content);
+}
+.container{
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.main{
+    width: 500px;
+    /* height: 500px; */
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.title-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.Mode{
+    all: unset;
+    cursor: pointer;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 900;
+}
+
+.form-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--lm-shadow);
+}
+.form-container.dark1 .inputData{
+    background-color: var(--lm-text);
+    color: white;
+}
+
+.inputData{
+    all: unset;
+    width: 100%;
+    height: 50px;
+    padding: 10px 50px;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: var(--lm-text);
+}
+
+.inputData::placeholder{
+    all: unset;
+    font-size: small;
+}
+
+.inputData:focus{
+    border: none;
+    outline: none;
+}
+.searchBtn{
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25%;
+    height: 50px;
+    width: fit-content;
+    padding: 0 15px;
+    font-weight: bold;
+    background: var(--btn);
+    border-radius: 5px;
+    color: var(--lm-bg);
+}
+
+.searchIcon{
+    position: absolute;
+    z-index: 100;
+    left: 15px;
+    top: 45%;
+}
+
+
+.display-container{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: var(--lm-shadow);
+}
+
+.display-container img{
+    height: 100px;
+    border-radius: 100%;
+}
+
+.display-container.dark1{
+    background-color: var(--lm-text);
+    color: white;
+}
+.display-container.dark1 .footer-data{
+    color: white;
+}
+
+
+
+.profile-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: small;
+}
+
+.userData{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+.userData p{
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.userData a{
+    color: rgb(0, 120, 255);
+}
+
+
+.bio{
+    width: 100%;
+    font-size: small;
+    opacity: 80%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+
+.Profile-data {
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--lm-text);
+    font-size: x-small;
+}
+.Profile-data .parameters{
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile-data a{
+    all: unset;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Profile-data span{
+    cursor: pointer;
+}
+.Profile-data span:hover a{
+    text-decoration: underline;
+}
+
+.Profile-data.dark{
+    background: var(--lm-text-alt);
+    color: white;
+}
+.Profile-data.dark a{
+    color: white;
+}
+.footer-data{
+    display:flex;
+    justify-content: space-between;
+    color: var(--lm-text);
+    font-size: small;
+}
+.footer-data a{
+    opacity: 60%;
+}
+.footer-data .row{
+    width: 50%;
+}
+.footer-data img{
+    width: 20px;
+    height: 20px;
+}
+
+
+.websiteLink{
+    all: unset;
+}
+.websiteLink:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.twitter-link{
+    all: unset;
+}
+.twitter-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

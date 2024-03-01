@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevDetective - Aryan</title>
+    <!-- css -->
     <link rel="stylesheet" href="./main.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <!-- favicon -->
     <link rel="icon" href="./images/favicon.ico">
 </head>
 <body>
     <div id="wrapper">
         <div class="container">
-            <div class="main-card">
-
+            <div class="main">
+                
                 <!-- Title Container -->
                 <div class="title-container">
                     <h2 class="title">DevDetective</h2>
-                    <button class="Dark-mode" >
-                        <p class="mode" >DARK</p>
-                        <img src="./images/moon-icon.svg" alt="" >
-                    </button>
-                    <button class="Light-mode" >
-                        <p class="mode" >Light</p>
-                        <img src="./images/sun-icon.svg" alt="" >
+                    <button class="Mode" data-darkMode >
+                        <p class="mode" data-Mode >LIGHT</p>
+                        <img data-modeImg alt="" class="modeImg" src="./images/sun-icon.svg">
                     </button>
                 </div>
 
 
                 <!-- Form Container -->
-                <div class="form-container">
-                    <input type="text" placeholder="Enter a Github username..." >
-                    <img src="./images/search-icon.svg" alt="">
-                    <button>Search</button>
-                </div>
+                <form class="form-container" data-searchForm>
+                    <input type="text" class="inputData" data-searchName placeholder="Enter a Github username..." >
+                    <img src="./images/search-icon.svg" alt="" class="searchIcon">
+                    <button type="submit" class="searchBtn">Search</button>
+                </form>
 
 
                 <!-- Display Container -->
@@ -40,31 +43,60 @@
                     <!-- name and username of Profile -->
                     <div class="profile-container">
                         <img  alt="" data-profilePic>
-                        <p></p>
-                        <p></p>
+                        <div class="userData">
+                            <p data-username></p>
+                        <a href="" data-usernameUrl></a>
+                        </div>
+                        <p data-joinDate ></p>
                     </div>
 
 
                     <!-- The profile bio -->
-                    <p></p>
+                    <p data-bio class="bio"></p>
 
 
                     <!-- repos , followers and following -->
                     <div class="Profile-data">
-                        <p>Repos <span ><a  data-repos></a></span></p>
-                        <p>Followers <span ><a  data-Followers></a></span></p>
-                        <p>Following <span ><a  data-Following></a></span></p>
+                        <p class="parameters">Repos
+                             <span >
+                                <a  data-repos>
+                                    
+                                </a></span>
+                            </p>
+                        <p class="parameters">Followers
+                             <span >
+                                <a  data-followers> 
+                                    
+                                </a>
+                            </span>
+                        </p>
+                        <p class="parameters">Following 
+                            <span >
+                                <a  data-following>
+                                    
+                                </a>
+                        </span>
+                    </p>
                     </div>
 
 
                     <!-- Other Data like location etc -->
                     <div class="footer-data">
-                        <p><img src="./images/location-icon.svg" alt=""><a ></a></span></p>
-                        <p><img src="./images/website-icon.svg" alt=""><a ></a></span></p>
-                        <p><img src="./images/twitter-icon.svg" alt=""><a ></a></span></p>
-                        <p><img src="./images/company-icon.svg" alt=""><a ></a></span></p>
+                       <div class="row">
+                        <img src="./images/location-icon.svg" alt="" class="icon">
+                        <a data-location></a>
+                        <br>
+                        <img src="./images/website-icon.svg" alt=""  class="icon" >
+                        <a data-website class="websiteLink"></a>
+                       </div>
+                        <div class="row">
+                            <p><img src="./images/twitter-icon.svg" alt=""  class="icon"> <span><a data-twitter class="twitter-link"></a></span></p>
+                        <p><img src="./images/company-icon.svg" alt=""  class="icon"> <span><a data-company></a></span></p>
+                        </div>
                     </div>
                 </div>
+            
+
             </div>
         </div>
     </div>
@@ -77,6 +109,6 @@
 
 
 
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
