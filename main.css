@@ -52,6 +52,7 @@
 }
 .title-container{
     width: 100%;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
@@ -111,8 +112,12 @@
     background: var(--btn);
     border-radius: 5px;
     color: var(--lm-bg);
+    transition: all 400ms ease-in-out;
 }
 
+.searchBtn:hover{
+    background-color: var(--btn-hover);
+}
 .searchIcon{
     position: absolute;
     z-index: 100;
@@ -243,4 +248,22 @@
 .twitter-link:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+
+.error{
+    z-index: 109;
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    scale: 0;
+    background-color: red;
+    border-radius: 30px;
+    right: 30%;
+    transition: all 700ms ease-in-out;
+    padding: 15px;
+}
+
+.error.active{
+    opacity: 1;
+    scale: 1;
 }

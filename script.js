@@ -1,10 +1,10 @@
-const authToken = "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";
+const authToken = "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";
 const searchName = document.querySelector("[data-searchName]");
 const displayContainer = document.querySelector(".display-container")
-
+const errorMessage = document.querySelector(".error");
 CallData("aryangupta1105")
 async function CallData(username){
-    try{
+    
         const url = `https://api.github.com/users/${username}`;
     const response = await fetch(url , { 
         headers: {
@@ -12,12 +12,12 @@ async function CallData(username){
     }});
     const data = await response.json();
     console.log(response.status);
+    // if(response.status === 200){
+    //     // errorMessage.classList.add("active");
+    // }
     console.log(data);
     renderDataUI(data);
-    }
-    catch(er){
-        console.log("Mashakalis");
-    }
+
 }
 const searchForm = document.querySelector("[data-searchForm]");
 searchForm.addEventListener("submit" ,(e)=>
@@ -66,11 +66,11 @@ function renderDataUI(data){
     website.innerText = `@${data?.login}`;
     website.href = `${data?.url}`;
     
-    for(let i = 0; i<arr.length; i++){
-        if(arr[i].innerText === "@null"){
-            arr[i].innerText = "Not Available";
-        }
-    }
+    // for(let i = 0; i<arr.length; i++){
+    //     if(arr[i].innerText === "@null"){
+    //         arr[i].innerText = "Not Available";
+    //     }
+    // }
 }
 
 function formatDate(dateString) {
