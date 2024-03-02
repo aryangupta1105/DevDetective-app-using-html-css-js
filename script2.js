@@ -1,4 +1,4 @@
-const authToken = "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";
+const authToken = "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";
 const searchName = document.querySelector("[data-searchName]");
 const displayContainer = document.querySelector(".display-container")
 const errorMessage = document.querySelector(".error");
