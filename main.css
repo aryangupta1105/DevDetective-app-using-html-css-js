@@ -135,6 +135,7 @@
 .main{
     position: relative;
     box-shadow: var(--lm-shadow);
+    animation: reveal 1s linear 1;
 }
 .display-container img{
     height: 100px;
@@ -266,4 +267,16 @@
   font-weight: bold;
   scale: 0;
   transition: 0.5s;
+}
+
+@keyframes reveal {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to 100%{
+        opacity: 1;
+    }
+
+    
 }
