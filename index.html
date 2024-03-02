@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevDetective - Aryan</title>
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./Images/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./Images/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="./Images/favicon-16x16.png"
+  />
+  <link rel="manifest" href="./Images/site.webmanifest" />
+
     <!-- css -->
     <link rel="stylesheet" href="./main.css">
     <!-- fonts -->
@@ -17,9 +36,6 @@
 <body>
     <div id="wrapper">
         <div class="container">
-            <div class="error">
-                No search results
-            </div>
             <div class="main">
                 
                 <!-- Title Container -->
@@ -34,11 +50,13 @@
 
                 <!-- Form Container -->
                 <form class="form-container" data-searchForm>
-                    <input type="text" class="inputData" data-searchName placeholder="Enter a Github username..." >
+                    <input type="text" class="inputData" data-searchName required autofocus placeholder="Enter a Github username..." >
                     <img src="./images/search-icon.svg" alt="" class="searchIcon">
                     <button type="submit" class="searchBtn">Search</button>
                 </form>
-                
+                <div class="error">
+                No search results
+            </div>
 
 
                 <!-- Display Container -->
@@ -113,6 +131,6 @@
 
 
 
-    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
 </body>
 </html>
