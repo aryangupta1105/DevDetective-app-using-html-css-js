@@ -7,7 +7,7 @@ async function CallData(username){
         const url = `https://api.github.com/users/${username}`;
     const response = await fetch(url , { 
         headers: {
-        'Authorization' : `Bearer ${authToken}`,
+        'Authorization' : ` ${authToken}`,
     }});
     const data = await response.json();
     renderDataUI(data);
